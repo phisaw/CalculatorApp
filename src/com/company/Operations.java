@@ -52,7 +52,7 @@ public class Operations {
         sum = (array.get(0) + (array.get(1)));
 
         System.out.println("Svaret blir: " + sum);
-
+        System.out.println();
         //print  vector
         //System.out.println("The Vector is: " + array);
     }
