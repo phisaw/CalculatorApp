@@ -5,11 +5,9 @@ import java.util.Vector;
 
 public class Operations {
 
-    float float1 = 0;
-    float float2 = 0;
     static float sum = 0;
 
-    static Vector<Float> array = new Vector<Float>(2);
+    static Vector<Float> array = new Vector<>();
 
     static Scanner input = new Scanner(System.in);
 

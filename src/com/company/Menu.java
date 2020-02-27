@@ -15,7 +15,7 @@ public class Menu {
             System.out.println("3. Multiplicera");
             System.out.println("4. Dividera");
             System.out.println("5. Avsluta");
-            System.out.println("");
+            System.out.println();
             System.out.print("Ange ditt val:");
 
 
