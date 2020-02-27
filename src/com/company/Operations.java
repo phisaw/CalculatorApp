@@ -13,13 +13,13 @@ public class Operations {
 
     static Scanner input = new Scanner(System.in);
 
-    public static void Scanner(String input1, String input2) {
+    public static void Scanner() {
 
         System.out.print("ange första talet: ");
-        input1 = input.nextLine();
+        String input1 = input.nextLine();
         try {
             float float1 = Float.parseFloat(input1);
-            array.add(float1);
+            array.add(0,float1);
 
         } catch (Exception e) {
             System.out.println("fel inmatning!");
@@ -28,10 +28,10 @@ public class Operations {
         }
 
         System.out.print("ange andra talet: ");
-        input2 = input.nextLine();
+        String input2 = input.nextLine();
         try {
             float float2 = Float.parseFloat(input2);
-            array.add(float2);
+            array.add(1,float2);
 
         } catch (Exception e) {
             System.out.println("fel inmatning");
@@ -47,7 +47,7 @@ public class Operations {
     public static void additionMethod() {
         System.out.println("Du valde addition");
         System.out.println();
-        Scanner(null, null);
+        Scanner();
 
         sum = (array.get(0) + (array.get(1)));
 
@@ -60,7 +60,7 @@ public class Operations {
     public static void subtractionMethod() {
         System.out.println("Du valde subtraktion");
         System.out.println();
-        Scanner(null, null);
+        Scanner();
 
         sum = (array.get(0) - (array.get(1)));
         System.out.println();
@@ -71,9 +71,9 @@ public class Operations {
     public static void muliplicationMethod() {
         System.out.println("Du valde multiplication");
         System.out.println();
-        Scanner(null, null);
+        Scanner();
 
-        sum = (array.get(0) * (array.get(1)));
+        sum = (array.get(0)*(array.get(1)));
         System.out.println();
         System.out.println("Svaret blir: " + sum);
         System.out.println();
@@ -82,7 +82,7 @@ public class Operations {
     public static void divisionMethod() {
         System.out.println("Du valde division");
         System.out.println();
-        Scanner(null, null);
+        Scanner();
 
         sum = (array.get(0) / (array.get(1)));
         System.out.println();
