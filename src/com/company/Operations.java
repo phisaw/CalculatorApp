@@ -61,17 +61,20 @@ public class Operations {
         System.out.println();
         Scanner();
 
-        if (choice.equals("1"))
-            sum = (array[0]) + (array[1]);
-
-        else if (choice.equals("2"))
-            sum = (array[0]) - (array[1]);
-
-        else if (choice.equals("3"))
-            sum = (array[0]) * (array[1]);
-
-        else
-            sum = (array[0]) / (array[1]);
+        switch (choice) {
+            case "1":
+                sum = (array[0]) + (array[1]);
+                break;
+            case "2":
+                sum = (array[0]) - (array[1]);
+                break;
+            case "3":
+                sum = (array[0]) * (array[1]);
+                break;
+            default:
+                sum = (array[0]) / (array[1]);
+                break;
+        }
 
         System.out.println();
         System.out.println("Svaret blir: " + sum);
