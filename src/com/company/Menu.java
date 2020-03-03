@@ -8,7 +8,7 @@ public class Menu {
 
     public void switchCase() {
 
-        do {
+        while (true) {
             System.out.println("vad vill du göra?");
             System.out.println("1. Addera");
             System.out.println("2. Subtrahera");
@@ -17,7 +17,6 @@ public class Menu {
             System.out.println("5. Avsluta");
             System.out.println();
             System.out.print("Ange ditt val:");
-
 
             choice = val.nextLine();
 
@@ -32,7 +31,7 @@ public class Menu {
                     break;
 
                 case "3":
-                    Operations.muliplicationMethod();
+                    Operations.multiplicationMethod();
                     break;
 
                 case "4":
@@ -45,10 +44,10 @@ public class Menu {
 
                 default:
                     System.out.println("Fel val, välj mellen 1-5");
+                    System.out.println();
                     break;
-
             }
-        }
-        while (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4") || choice.equals("5"));
+        }//
+        // (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4") || choice.equals("5"));
     }
 }
