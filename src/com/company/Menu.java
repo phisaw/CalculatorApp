@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Menu {
 
-    String choice = "";
-    Scanner val = new Scanner(System.in);
+    static String choice = "";
+    Scanner scan = new Scanner(System.in);
 
     public void switchCase() {
 
@@ -18,7 +18,7 @@ public class Menu {
             System.out.println();
             System.out.print("Ange ditt val:");
 
-            choice = val.nextLine();
+            choice = scan.nextLine();
 
             switch (choice) {
 
@@ -47,7 +47,6 @@ public class Menu {
                     System.out.println();
                     break;
             }
-        }//
-        // (choice.equals("1") || choice.equals("2") || choice.equals("3") || choice.equals("4") || choice.equals("5"));
+        }
     }
 }

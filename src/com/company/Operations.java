@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
-import java.util.Vector;
+import static com.company.Menu.choice;
 
 public class Operations {
 
@@ -13,78 +13,66 @@ public class Operations {
 
         boolean correct = false;
         while (!correct){
-            System.out.print("ange första talet: ");
+            System.out.print("Ange första talet: ");
             String input1 = input.nextLine();
             try {
-
                 array[0] = Float.parseFloat(input1);
-
                 correct = true;
 
             } catch (Exception e) {
-                System.out.println("fel inmatningsformat.");
+                System.out.println("Fel format.");
             }
          }
-
-
-
         correct = false;
         while (!correct){
-            System.out.print("ange andra talet: ");
+            System.out.print("Ange andra talet: ");
             String input2 = input.nextLine();
             try {
                 array[1] =Float.parseFloat(input2);
-
                 correct = true;
 
             } catch (Exception e) {
-                System.out.println("Fel inmatningsformat");
+                System.out.println("Fel format");
             }
         }
     }
+
     public static void additionMethod() {
         System.out.println("Du valde addition");
-        System.out.println();
-        Scanner();
-
-        sum = array[0] + (array[1]);
-        //sum = (array.get(0) + (array.get(1)));
-        System.out.println();
-        System.out.println("Svaret blir: " + sum);
-        System.out.println();
+        CalcPrint();
     }
 
     public static void subtractionMethod() {
         System.out.println("Du valde subtraktion");
-        System.out.println();
-        Scanner();
-
-        sum = array[0] - (array[1]);
-        //sum = (array.get(0) - (array.get(1)));
-        System.out.println();
-        System.out.println("Svaret blir: " + sum);
-        System.out.println();
+        CalcPrint();
     }
 
     public static void multiplicationMethod() {
-        System.out.println("Du valde multiplication");
-        System.out.println();
-        Scanner();
-
-        sum = array[0] * (array[1]);
-        //sum = (array.get(0)*(array.get(1)));
-        System.out.println();
-        System.out.println("Svaret blir: " + sum);
-        System.out.println();
+        System.out.println("Du valde multiplikation");
+        CalcPrint();
     }
 
     public static void divisionMethod() {
         System.out.println("Du valde division");
+        CalcPrint();
+    }
+
+    public static void CalcPrint(){
         System.out.println();
         Scanner();
 
-        sum = array[0] / (array[1]);
-        //sum = (array.get(0) / (array.get(1)));
+        if (choice.equals("1"))
+            sum = (array[0]) + (array[1]);
+
+        else if (choice.equals("2"))
+            sum = (array[0]) - (array[1]);
+
+        else if (choice.equals("3"))
+            sum = (array[0]) * (array[1]);
+
+        else
+            sum = (array[0]) / (array[1]);
+
         System.out.println();
         System.out.println("Svaret blir: " + sum);
         System.out.println();
