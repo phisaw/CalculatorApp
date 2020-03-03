@@ -9,7 +9,7 @@ public class Operations {
     static Float[] array = new Float[2];
     static Scanner input = new Scanner(System.in);
 
-    public static void Scanner() {
+    static void Scanner() {
 
         boolean correct = false;
         while (!correct){
@@ -17,7 +17,7 @@ public class Operations {
             String input1 = input.nextLine();
             try {
                 array[0] = Float.parseFloat(input1);
-                correct = true;
+                correct =true;
 
             } catch (Exception e) {
                 System.out.println("Fel format.");
@@ -37,29 +37,50 @@ public class Operations {
         }
     }
 
-    public static void additionMethod() {
+    static void Scanner2Test() {
+
+        boolean correct = false;
+        while (!correct){
+            System.out.println("Ange dina tal: ");
+            System.out.print("1# : ");
+            String input1 = input.nextLine();
+            System.out.print("2# : ");
+            String input2 = input.nextLine();
+            try {
+                array[0] =Float.parseFloat(input1);
+                array[1] =Float.parseFloat(input2);
+                correct =true;
+
+            } catch (Exception e) {
+                System.out.println("Fel format.");
+            }
+        }
+    }
+
+    static void additionMethod() {
         System.out.println("Du valde addition");
-        CalcPrint();
+        calcPrint();
     }
 
-    public static void subtractionMethod() {
+    static void subtractionMethod() {
         System.out.println("Du valde subtraktion");
-        CalcPrint();
+        calcPrint();
     }
 
-    public static void multiplicationMethod() {
+    static void multiplicationMethod() {
         System.out.println("Du valde multiplikation");
-        CalcPrint();
+        calcPrint();
     }
 
-    public static void divisionMethod() {
+    static void divisionMethod() {
         System.out.println("Du valde division");
-        CalcPrint();
+        calcPrint();
     }
 
-    public static void CalcPrint(){
+    static void calcPrint(){
         System.out.println();
-        Scanner();
+        //Scanner();
+        Scanner2Test();
 
         switch (choice) {
             case "1":
@@ -81,7 +102,7 @@ public class Operations {
         System.out.println();
     }
 
-    public static void exitApp() {
+    static void exitApp() {
         System.out.println("Programmet avslutas");
         System.exit(0);
     }

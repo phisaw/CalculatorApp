@@ -6,7 +6,7 @@ public class Menu {
     static String choice = "";
     Scanner scan = new Scanner(System.in);
 
-    public void switchCase() {
+    void switchCase() {
 
         while (true) {
             System.out.println("vad vill du göra?");
